@@ -1,0 +1,136 @@
+.navbar {
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .logo {
+  width: 150px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.navbar-menu {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  color: #49557e;
+  font-size: 18px;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.navbar button {
+  background: transparent;
+  font-size: 16px;
+  color: #49557e;
+  border: 2px solid tomato !important;
+  padding: 10px 30px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 200ms;
+}
+
+.navbar button:hover {
+  background: #fff4f2;
+}
+
+.navbar .active {
+  color: tomato;
+  transition: 0.3s;
+}
+
+.navbar .active::before {
+  content: "";
+  position: absolute;
+  background: tomato;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  width: 4px;
+  animation: borderElongate 0.3s forwards;
+  border-radius: 10px;
+}
+
+@keyframes borderElongate {
+  0% {
+    left: 0%;
+  }
+  100% {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.navbar a {
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 5px;
+}
+
+.navbar-search-icon {
+  position: relative;
+}
+
+.navbar-search-icon .dot {
+  position: absolute;
+  top: -6px;
+  left: 30px;
+  transform: translate(-50%, -50%);
+  min-width: 10px;
+  min-height: 10px;
+  background: tomato;
+  border-radius: 50%;
+}
+
+@media (max-width: 1050px) {
+  .navbar .logo {
+    width: 120px;
+    margin-bottom: 7px;
+  }
+  .navbar-menu {
+    gap: 20px;
+    font-size: 17px;
+  }
+  .navbar-right {
+    gap: 30px;
+  }
+  .navbar-right img {
+    width: 22px;
+  }
+  .navbar-right button {
+    padding: 8px 25px;
+  }
+}
+
+@media (max-width: 900px) {
+  .navbar .logo {
+    width: 100px;
+  }
+  .navbar-menu {
+    gap: 15px;
+    font-size: 15px;
+  }
+  .navbar-right {
+    gap: 20px;
+  }
+  .navbar-right img {
+    width: 18px;
+  }
+  .navbar-right button {
+    padding: 7px 20px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 750px) {
+  .navbar-menu {
+    display: none;
+  }
+}
