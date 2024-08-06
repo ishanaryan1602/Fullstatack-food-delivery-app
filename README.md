@@ -1,8 +1,8 @@
 # Food Delivery App
 
-<!-- [Live Demo](https://gemini-clone-eight-rosy.vercel.app/) -->
+[Live Demo](https://food-delivery-fullstack-blush.vercel.app/)
 
-Food delivery is a dynamic food delivery app built with the MERN stack, offering users a smooth and intuitive experience for ordering their favorite meals and managing their deliveries with ease.
+Food Delivery is a dynamic and user-friendly application built with the React, designed to offer a seamless experience for ordering meals and managing deliveries. Whether you're craving a quick snack or a full meal, our app makes it easy to browse, select, and enjoy your favorite dishes with just a few clicks.
 
 ## Table of Contents
 
@@ -12,9 +12,7 @@ Food delivery is a dynamic food delivery app built with the MERN stack, offering
 
 ## Features
 
-- **Responsive Sidebar**: Toggleable sidebar with smooth transitions.
-- **New Chat Interface**: Easy-to-use chat initiation with dynamic content display.
-- **Recent Activity Management**: Displays recent chats and activities.
+- **Responsive**: Responsive pages.
 - **Interactive UI Elements**: Intuitive design with visual feedback on interactions.
 
 ## Technologies Used
@@ -31,6 +29,9 @@ Food delivery is a dynamic food delivery app built with the MERN stack, offering
 
 ## Images
 
-![image](https://github.com/user-attachments/assets/2d1a2c1a-6421-4c0f-befc-2f43584f2f5d)
-![image](https://github.com/user-attachments/assets/68c899c6-7036-4277-a0f2-102dee864b99)
-![image](https://github.com/user-attachments/assets/c8164b2b-2174-4068-ba69-dfd5523b9dc8)
+![image](https://github.com/user-attachments/assets/7ed215f0-54fd-47f7-b576-40a434683501)
+![image](https://github.com/user-attachments/assets/cfbc7a92-da57-403a-9d69-d128f5f8cd04)
+![image](https://github.com/user-attachments/assets/b6d0dfae-b451-455f-bbd4-7e3301dd213a)
+
+
+
