@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import './Add.css'
 import { assets } from '../../assets/assets'
+import axios from 'axios';
+import { toast } from 'react-toastify';
 
-const Add = () => {
-
+const Add = ({url}) => {
+    // const url = "http://localhost:4000"
     const [image, setImage] = useState(false);
     const [data, setData] = useState({
         name: '',
@@ -19,11 +21,36 @@ const Add = () => {
         setData(data => ({ ...data, [name]: value }))
     }
 
-    useEffect(() => { console.log(data)}, [data])
+    const onSubmitHandler = async (event) => {
+        event.preventDefault();
+        const formData = new FormData();
+        formData.append("name", data.name);
+        formData.append("description", data.description);
+        formData.append("category", data.category);
+        formData.append("price", Number(data.price));
+        formData.append("image", image);
+        const respnse = await axios.post(`${url}/api/food/add`, formData);
+        if (respnse.data.success) {
+            setData({
+                name: '',
+                description: '',
+                category: 'Salad',
+                price: '',
+                image: ''
+            })
+            setImage(false)
+            toast.success(respnse.data.message)
+        }
+        else {
+            toast.success(respnse.data.message)
+        }
+    }
+
+    useEffect(() => { console.log(data) }, [data])
 
     return (
         <div className='add' >
-            <form className='flex-col'>
+            <form className='flex-col' onSubmit={onSubmitHandler} >
                 <div className='add-img-upload flex-col'>
                     <p>Upload Image</p>
                     <label htmlFor="image">
