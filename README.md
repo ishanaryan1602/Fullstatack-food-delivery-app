@@ -23,6 +23,16 @@ Food Delivery is a dynamic and user-friendly application built with the React, d
 - CSS
 - HTML
 
+### Backend
+
+- Node
+- Express
+- Stripe
+
+### Database
+
+- MongoDB
+
 ### Deployment
 
 - Vercel
