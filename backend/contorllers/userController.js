@@ -6,7 +6,7 @@ const validator = require("validator");
 const loginUser = async (req, res) => {
     const { email, password } = req.body;
     try {
-        const user = userMdoel.findOne({ email })
+        const user = await userMdoel.findOne({ email })
 
         if (!user) { return res.json({ success: false, message: "User not found" }) }
         const isMatch = bcrypt.compare(password, user.password);

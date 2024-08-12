@@ -3,6 +3,7 @@ const cors = require('cors');
 const connectDB = require('./config/db');
 const foodrRouter = require('./routes/foodRoute');
 const userRouter = require('./routes/userRoute');
+const cartRouter = require('./routes/cartRoute');
 require('dotenv').config();
 
 const app = express();
@@ -16,10 +17,11 @@ connectDB();
 app.use("/api/food",foodrRouter)
 app.use("/images",express.static('uploads'))
 app.use("/api/user",userRouter)
+app.use("/api/cart",cartRouter)
 
 app.get("/", (req, res) => {
     res.send("Hello World!");
-})
+});
 
 app.listen(port, () => console.log('server running on port', port));
 
